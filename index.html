@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>育華國小 三年甲班 ｜ 班級教學網站</title>
+<meta name="description" content="育華國小三年甲班班級網站：班級簡介、最新公告、每日課表、活動剪影、老師介紹與班級 LINE 群組 QR Code。">
+<meta name="keywords" content="育華國小, 三年甲班, 班級網站, 課表, 公告, LINE群組">
+<meta name="author" content="育華國小 三年甲班">
+<meta name="theme-color" content="#1b5e9e">
+
+<!-- 網頁圖示：使用班級 logo -->
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+
+<!-- 字型：Google Fonts（Noto Sans TC 繁中、Baloo 2 圓體數字） -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Baloo+2:wght@600;800&display=swap" rel="stylesheet">
+
+<!-- 免費小圖示：Font Awesome 6 Free -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ==================== 頂部公告列 ==================== -->
+<div class="topbar">
+  <div class="container topbar__inner">
+    <p class="topbar__note">
+      <i class="fa-solid fa-bell"></i>
+      <span>本週五（10/24）為校慶運動會，請著運動服並於 7:40 前到操場集合。</span>
+    </p>
+    <p class="topbar__meta">
+      <span class="topbar__date"><i class="fa-regular fa-calendar"></i> <span id="todayDate">—</span></span>
+      <span class="topbar__sep"></span>
+      <span><i class="fa-solid fa-phone"></i> 02-0000-0000</span>
+    </p>
+  </div>
+</div>
+
+<!-- ==================== 導覽列 ==================== -->
+<header class="site-header" id="siteHeader">
+  <div class="container nav">
+    <a class="brand" href="#home">
+      <span class="brand__logo">
+        <img src="logo.png" alt="育華國小三年甲班班徽" width="56" height="56">
+      </span>
+      <span class="brand__text">
+        <strong>育華國小</strong>
+        <small>三年甲班・班級網站</small>
+      </span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="開啟選單" aria-expanded="false" aria-controls="navMenu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="nav__menu" id="navMenu" aria-label="主要選單">
+      <a href="#home" class="nav__link is-active">首頁</a>
+      <a href="#about" class="nav__link">班級簡介</a>
+      <a href="#announce" class="nav__link">最新公告</a>
+      <a href="#timetable" class="nav__link">課表查詢</a>
+      <a href="#activities" class="nav__link">活動剪影</a>
+      <a href="#teacher" class="nav__link">老師介紹</a>
+      <a href="#join" class="nav__link">加入班群</a>
+      <a href="#contact" class="nav__link">聯絡我們</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ==================== 首頁 Banner ==================== -->
+  <section class="hero" id="home">
+    <div class="hero__bg" aria-hidden="true">
+      <span class="blob blob--1"></span>
+      <span class="blob blob--2"></span>
+      <span class="blob blob--3"></span>
+      <span class="dot-pattern"></span>
+    </div>
+
+    <div class="container hero__inner">
+      <div class="hero__copy">
+        <p class="hero__badge">
+          <i class="fa-solid fa-star"></i>
+          歡迎來到 <span>育華國小 三年甲班</span> 的溫暖小天地
+        </p>
+
+        <h1 class="hero__title">
+          快樂學習<br>
+          <span class="hero__title-accent">認真成長</span>
+          <i class="fa-solid fa-cloud-sun hero__title-icon" aria-hidden="true"></i>
+        </h1>
+
+        <p class="hero__desc">
+          這裡是我們三年甲班的班級網站。課表安排、班級公告、活動照片、老師的話，
+          以及最重要的——<strong>和家長一起關心孩子成長</strong>的地方。
+        </p>
+
+        <div class="hero__actions">
+          <a href="#timetable" class="btn btn--primary">
+            <i class="fa-solid fa-table-columns"></i> 查看本週課表
+          </a>
+          <a href="#join" class="btn btn--ghost">
+            <i class="fa-solid fa-qrcode"></i> 掃碼加入班群
+          </a>
+        </div>
+
+        <ul class="hero__stats">
+          <li><b data-count="28">0</b><span>班級人數</span></li>
+          <li><b data-count="7">0</b><span>每日節數</span></li>
+          <li><b data-count="6">0</b><span>專任老師</span></li>
+          <li><b data-count="100">0</b><span>安心學習</span></li>
+        </ul>
+      </div>
+
+      <div class="hero__visual">
+        <div class="hero__card">
+          <span class="hero__card-glow" aria-hidden="true"></span>
+          <img src="logo.png" alt="育華國小三年甲班班徽：戴上 C 帽子的可愛貓咪" width="320" height="320">
+          <div class="hero__card-label">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>三年甲班・我們的班徽</span>
+          </div>
+        </div>
+
+        <span class="float-chip float-chip--1"><i class="fa-solid fa-pen-to-square"></i> 寫作</span>
+        <span class="float-chip float-chip--2"><i class="fa-solid fa-flask"></i> 自然</span>
+        <span class="float-chip float-chip--3"><i class="fa-solid fa-futbol"></i> 運動</span>
+        <span class="float-chip float-chip--4"><i class="fa-solid fa-book-open"></i> 閱讀</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 快捷入口 ==================== -->
+  <section class="section section--tight" id="quick">
+    <div class="container">
+      <div class="quick-grid reveal">
+        <a class="quick-card" href="#announce">
+          <span class="quick-card__icon quick-card__icon--blue"><i class="fa-solid fa-bullhorn"></i></span>
+          <span class="quick-card__body">
+            <b>班級公告</b>
+            <small>最新消息不漏接</small>
+          </span>
+          <i class="fa-solid fa-chevron-right quick-card__arrow"></i>
+        </a>
+        <a class="quick-card" href="#timetable">
+          <span class="quick-card__icon quick-card__icon--orange"><i class="fa-solid fa-calendar-days"></i></span>
+          <span class="quick-card__body">
+            <b>每週課表</b>
+            <small>上課時間一目了然</small>
+          </span>
+          <i class="fa-solid fa-chevron-right quick-card__arrow"></i>
+        </a>
+        <a class="quick-card" href="#join">
+          <span class="quick-card__icon quick-card__icon--green"><i class="fa-solid fa-comments"></i></span>
+          <span class="quick-card__body">
+            <b>LINE 班群</b>
+            <small>掃碼即時聯繫</small>
+          </span>
+          <i class="fa-solid fa-chevron-right quick-card__arrow"></i>
+        </a>
+        <a class="quick-card" href="#activities">
+          <span class="quick-card__icon quick-card__icon--pink"><i class="fa-solid fa-camera-retro"></i></span>
+          <span class="quick-card__body">
+            <b>活動剪影</b>
+            <small>點點滴滴回憶</small>
+          </span>
+          <i class="fa-solid fa-chevron-right quick-card__arrow"></i>
+        </a>
+        <a class="quick-card" href="#teacher">
+          <span class="quick-card__icon quick-card__icon--purple"><i class="fa-solid fa-chalkboard-user"></i></span>
+          <span class="quick-card__body">
+            <b>老師介紹</b>
+            <small>認識我們的師資</small>
+          </span>
+          <i class="fa-solid fa-chevron-right quick-card__arrow"></i>
+        </a>
+        <a class="quick-card" href="#contact">
+          <span class="quick-card__icon quick-card__icon--teal"><i class="fa-solid fa-headset"></i></span>
+          <span class="quick-card__body">
+            <b>聯絡窗口</b>
+            <small>有任何問題都能找我們</small>
+          </span>
+          <i class="fa-solid fa-chevron-right quick-card__arrow"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 班級簡介 ==================== -->
+  <section class="section" id="about">
+    <div class="container">
+      <header class="section__head reveal">
+        <p class="section__eyebrow"><i class="fa-solid fa-chalkboard"></i> ABOUT US</p>
+        <h2 class="section__title">班級簡介</h2>
+        <p class="section__lead">我們是一個喜歡提問、喜歡動手做、也喜歡互相幫忙的三年級班級。</p>
+      </header>
+
+      <div class="about">
+        <div class="about__text reveal">
+          <p class="about__p">
+            <strong>育華國小三年甲班</strong>成立於民國一〇三年九月，目前共有 <strong>28 位</strong>孩子。
+            我們的班級公約是「<em>每天進步一點點，班級更溫暖一點點</em>」——
+            不管是認真完成作業、勇敢舉手發言，還是主動幫同學撿起垃圾，都是值得被記錄的勇敢。
+          </p>
+
+          <ul class="feature-list">
+            <li><span class="feature-list__icon"><i class="fa-solid fa-user-group"></i></span>
+              <div><b>溫馨的班級經營</b><p>每週班會共同訂定班級目標，透過表揚卡與榮譽榜鼓勵每一位孩子。</p></div>
+            </li>
+            <li><span class="feature-list__icon"><i class="fa-solid fa-book"></i></span>
+              <div><b>閱讀不停歇</b><p>每週二、三的晨光閱讀時間，全班一起讀半小時，班級圖書室藏書超過五百冊。</p></div>
+            </li>
+            <li><span class="feature-list__icon"><i class="fa-solid fa-earth-asia"></i></span>
+              <div><b>豐富的學習歷程</b><p>自然課走出教室做觀測、藝術課完成workshop、體育課挑戰接力賽，讓學習變得生動。</p></div>
+            </li>
+            <li><span class="feature-list__icon"><i class="fa-solid fa-hand-holding-heart"></i></span>
+              <div><b>家校緊密連結</b><p>透過 LINE 班群同步作業與生活動態，期中考後安排一次家長座談會。</p></div>
+            </li>
+          </ul>
+        </div>
+
+        <aside class="about__cards reveal">
+          <div class="mini-card">
+            <span class="mini-card__icon"><i class="fa-solid fa-school"></i></span>
+            <b>班級基本資料</b>
+            <ul class="mini-list">
+              <li><span>班級名稱</span><b>三年甲班</b></li>
+              <li><span>班級人數</span><b>28 人</b></li>
+              <li><span>成立年份</span><b>民國 103 年</b></li>
+              <li><span>班級導師</span><b>○○○ 老師</b></li>
+            </ul>
+          </div>
+          <div class="mini-card mini-card--warm">
+            <span class="mini-card__icon"><i class="fa-solid fa-star"></i></span>
+            <b>本週之星</b>
+            <div class="star-students">
+              <span class="star-students__item"><i class="fa-solid fa-medal"></i> 小明</span>
+              <span class="star-students__item"><i class="fa-solid fa-medal"></i> 小華</span>
+              <span class="star-students__item"><i class="fa-solid fa-medal"></i> 小美</span>
+            </div>
+            <p class="mini-note">持續累積榮譽卡，就能挑戰班級的「超級獎章」喔！</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 最新公告 ==================== -->
+  <section class="section section--alt" id="announce">
+    <div class="container">
+      <header class="section__head reveal">
+        <p class="section__eyebrow"><i class="fa-solid fa-bullhorn"></i> ANNOUNCEMENT</p>
+        <h2 class="section__title">最新公告</h2>
+        <p class="section__lead">班級事務、家長須知與重要活動，隨時更新。</p>
+      </header>
+
+      <div class="announce-grid">
+        <article class="announce-card announce-card--primary reveal">
+          <span class="announce-card__tag"><i class="fa-solid fa-circle-exclamation"></i> 重要</span>
+          <div class="announce-card__date"><b>21</b><span>10月</span></div>
+          <h3>校慶運動會相關說明</h3>
+          <p>10/24（五）校慶運動會，當天請務必攜帶水壺與毛巾，運動服以藍白為主。八點前完成全班集合點名。</p>
+          <span class="announce-card__meta"><i class="fa-regular fa-user"></i> 三年甲班導師</span>
+        </article>
+
+        <article class="announce-card reveal">
+          <span class="announce-card__tag announce-card__tag--green"><i class="fa-solid fa-book"></i> 課業</span>
+          <div class="announce-card__date"><b>20</b><span>10月</span></div>
+          <h3>自然課小報告上週題</h3>
+          <p>請於週三自然課前完成「豆芽生長紀錄表」第 3 頁，觀察資料請家長協助簽名。</p>
+          <span class="announce-card__meta"><i class="fa-regular fa-user"></i> 自然科任課老師</span>
+        </article>
+
+        <article class="announce-card reveal">
+          <span class="announce-card__tag announce-card__tag--orange"><i class="fa-solid fa-money-bill-wave"></i> 缴费</span>
+          <div class="announce-card__date"><b>18</b><span>10月</span></div>
+          <h3>教材費與班費繳交</h3>
+          <p>本學期教材費已開放繳交，請於 10/31 前以 LINE 轉帳並回覆姓名，或親自至導師辦公室登記。</p>
+          <span class="announce-card__meta"><i class="fa-regular fa-user"></i> 三年甲班導師</span>
+        </article>
+
+        <article class="announce-card reveal">
+          <span class="announce-card__tag announce-card__tag--purple"><i class="fa-solid fa-bus"></i> 活動</span>
+          <div class="announce-card__date"><b>16</b><span>10月</span></div>
+          <h3>校外教學－動物園</h3>
+          <p>11/8（四）校外教學，請家長填寫同意書，並於 10/30 前完成團體保險資料。</p>
+          <span class="announce-card__meta"><i class="fa-regular fa-user"></i> 導師與家長會</span>
+        </article>
+
+        <article class="announce-card reveal">
+          <span class="announce-card__tag announce-card__tag--blue"><i class="fa-solid fa-shirt"></i> 服儀</span>
+          <div class="announce-card__date"><b>14</b><span>10月</span></div>
+          <h3>週三制服日提醒</h3>
+          <p>每週三為制服日，請同學穿著制服上學並記得穿白色襪子，別忘了自己整理儀容。</p>
+          <span class="announce-card__meta"><i class="fa-regular fa-user"></i> 級任導師</span>
+        </article>
+
+        <article class="announce-card reveal">
+          <span class="announce-card__tag announce-card__tag--teal"><i class="fa-solid fa-bowl-food"></i> 午餐</span>
+          <div class="announce-card__date"><b>11</b><span>10月</span></div>
+          <h3>午餐menu與食譜表</h3>
+          <p>本週午餐包含高麗菜捲、番茄蛋花湯與水果。請家長協助填寫飲食調查回條。</p>
+          <span class="announce-card__meta"><i class="fa-regular fa-user"></i> 午餐承辦廚房</span>
+        </article>
+      </div>
+
+      <div class="section__foot reveal">
+        <a href="#announce" class="btn btn--light">
+          <i class="fa-solid fa-list-check"></i> 查看更多公告
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 課表 ==================== -->
+  <section class="section" id="timetable">
+    <div class="container">
+      <header class="section__head reveal">
+        <p class="section__eyebrow"><i class="fa-solid fa-table-columns"></i> TIMETABLE</p>
+        <h2 class="section__title">本週課表</h2>
+        <p class="section__lead">三年甲班 三年級上學期課表 ｜ 資料若有異動，以導師公告為準。</p>
+      </header>
+
+      <div class="table-wrap reveal">
+        <table class="timetable">
+          <caption class="sr-only">三年甲班每週課表</caption>
+          <thead>
+            <tr>
+              <th scope="col">節次／時間</th>
+              <th scope="col"><span class="weekday">星期一</span><small>10/20</small></th>
+              <th scope="col"><span class="weekday">星期二</span><small>10/21</small></th>
+              <th scope="col"><span class="weekday">星期三</span><small>10/22</small></th>
+              <th scope="col"><span class="weekday">星期四</span><small>10/23</small></th>
+              <th scope="col"><span class="weekday">星期五</span><small>10/24</small></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">早自習<span class="timetable__time">07:30 - 08:00</span></th>
+              <td colspan="5" class="cell-cell cell-cell--soft">晨光閱讀 / 國語生字訂正</td>
+            </tr>
+            <tr>
+              <th scope="row">第一節<span class="timetable__time">08:00 - 08:40</span></th>
+              <td class="cell-chinese">國語</td>
+              <td class="cell-math">數學</td>
+              <td class="cell-chinese">國語</td>
+              <td class="cell-math">數學</td>
+              <td class="cell-chinese">國語</td>
+            </tr>
+            <tr>
+              <th scope="row">第二節<span class="timetable__time">08:45 - 09:25</span></th>
+              <td class="cell-math">數學</td>
+              <td class="cell-chinese">國語</td>
+              <td class="cell-math">數學</td>
+              <td class="cell-chinese">國語</td>
+              <td class="cell-math">數學</td>
+            </tr>
+            <tr>
+              <th scope="row">第三節<span class="timetable__time">09:40 - 10:20</span></th>
+              <td class="cell-science">自然</td>
+              <td class="cell-sport">體育</td>
+              <td class="cell-social">社會</td>
+              <td class="cell-art">美術</td>
+              <td class="cell-science">自然</td>
+            </tr>
+            <tr>
+              <th scope="row">第四節<span class="timetable__time">10:30 - 11:10</span></th>
+              <td class="cell-social">社會</td>
+              <td class="cell-science">自然</td>
+              <td class="cell-health">健康</td>
+              <td class="cell-music">音樂</td>
+              <td class="cell-social">社會</td>
+            </tr>
+            <tr>
+              <th scope="row">第五節<span class="timetable__time">11:20 - 12:00</span></th>
+              <td class="cell-chinese">國語</td>
+              <td class="cell-activity">綜合活動</td>
+              <td class="cell-chinese">國語</td>
+              <td class="cell-english">英語</td>
+              <td class="cell-chinese">國語</td>
+            </tr>
+            <tr>
+              <th scope="row">午休<span class="timetable__time">12:00 - 13:10</span></th>
+              <td colspan="5" class="cell-cell cell-cell--soft">午餐 12:10 ／ 午休靜態活動</td>
+            </tr>
+            <tr>
+              <th scope="row">第六節<span class="timetable__time">13:20 - 14:00</span></th>
+              <td class="cell-sport">體育</td>
+              <td class="cell-art">美術</td>
+              <td class="cell-class">班會</td>
+              <td class="cell-science">自然</td>
+              <td class="cell-activity">綜合活動</td>
+            </tr>
+            <tr>
+              <th scope="row">第七節<span class="timetable__time">14:10 - 14:50</span></th>
+              <td class="cell-cell">國小課後輔導</td>
+              <td class="cell-cell">課後照顧</td>
+              <td class="cell-cell">課後照顧</td>
+              <td class="cell-cell">課後照顧</td>
+              <td class="cell-cell">課後照顧</td>
+            </tr>
+            <tr>
+              <th scope="row">掃除<span class="timetable__time">14:50 - 15:10</span></th>
+              <td colspan="5" class="cell-cell cell-cell--soft">打掃與整理，值日生別忘了關燈關門</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subject-legend reveal">
+        <span class="subject-legend__title"><i class="fa-solid fa-palette"></i> 科目色例</span>
+        <span><i class="dot dot-chinese"></i> 國語</span>
+        <span><i class="dot dot-math"></i> 數學</span>
+        <span><i class="dot dot-science"></i> 自然</span>
+        <span><i class="dot dot-social"></i> 社會</span>
+        <span><i class="dot dot-sport"></i> 體育</span>
+        <span><i class="dot dot-art"></i> 美術</span>
+        <span><i class="dot dot-music"></i> 音樂</span>
+        <span><i class="dot dot-health"></i> 健康</span>
+        <span><i class="dot dot-english"></i> 英語</span>
+        <span><i class="dot dot-activity"></i> 綜合</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 活動剪影 ==================== -->
+  <section class="section section--alt" id="activities">
+    <div class="container">
+      <header class="section__head reveal">
+        <p class="section__eyebrow"><i class="fa-solid fa-camera-retro"></i> ACTIVITIES</p>
+        <h2 class="section__title">活動剪影</h2>
+        <p class="section__lead">一起上課、一起遊戲、一起長大——這些都是三年甲班的珍寶。</p>
+      </header>
+
+      <div class="gallery">
+        <figure class="gallery__item gallery__item--tall reveal">
+          <div class="gallery__thumb thumb--1"><i class="fa-solid fa-seedling"></i></div>
+          <figcaption><b>自然課：豆芽觀察記</b><span>每天量一量，小組合作完成觀察表</span></figcaption>
+        </figure>
+        <figure class="gallery__item reveal">
+          <div class="gallery__thumb thumb--2"><i class="fa-solid fa-futbol"></i></div>
+          <figcaption><b>校慶運動會</b><span>全班加油吶喊，凝聚班士氣</span></figcaption>
+        </figure>
+        <figure class="gallery__item reveal">
+          <div class="gallery__thumb thumb--3"><i class="fa-solid fa-palette"></i></div>
+          <figcaption><b>美術課：色彩大師</b><span>用彩繪完成我們的班級海報</span></figcaption>
+        </figure>
+        <figure class="gallery__item reveal">
+          <div class="gallery__thumb thumb--5"><i class="fa-solid fa-utensils"></i></div>
+          <figcaption><b>班級午餐</b><span>一起洗滌、一起排隊、一起吃飽</span></figcaption>
+        </figure>
+        <figure class="gallery__item gallery__item--wide reveal">
+          <div class="gallery__thumb thumb--4"><i class="fa-solid fa-book-open-reader"></i></div>
+          <figcaption><b>晨光閱讀</b><span>每天三十分鐘，和一本好書做朋友</span></figcaption>
+        </figure>
+        <figure class="gallery__item reveal">
+          <div class="gallery__thumb thumb--6"><i class="fa-solid fa-tree"></i></div>
+          <figcaption><b>校外教學</b><span>走出教室，真實的世界就是教室</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 老師介紹 ==================== -->
+  <section class="section" id="teacher">
+    <div class="container">
+      <header class="section__head reveal">
+        <p class="section__eyebrow"><i class="fa-solid fa-chalkboard-user"></i> TEACHERS</p>
+        <h2 class="section__title">老師介紹</h2>
+        <p class="section__lead">每位老師都是孩子成長路上的守護者，歡迎透過班群與我們聯繫。</p>
+      </header>
+
+      <div class="teacher-grid">
+        <article class="teacher-card teacher-card--lead reveal">
+          <div class="teacher-card__avatar"><i class="fa-solid fa-person-chalkboard"></i></div>
+          <div class="teacher-card__info">
+            <span class="teacher-card__role">班級導師</span>
+            <h3>○○○ 老師</h3>
+            <p>任教國語與班級導師，期許每位孩子都能找到自己的舞台，勇敢發表、認真生活。</p>
+            <ul class="teacher-card__list">
+              <li><i class="fa-solid fa-clock"></i> 辦公時間：週一至週五 07:30-16:00</li>
+              <li><i class="fa-solid fa-envelope"></i> 信箱：class3a@yuhua.edu.tw</li>
+              <li><i class="fa-solid fa-location-dot"></i> 辦公室：三甲教室</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="teacher-card reveal">
+          <div class="teacher-card__avatar teacher-card__avatar--purple"><i class="fa-solid fa-calculator"></i></div>
+          <div class="teacher-card__info">
+            <span class="teacher-card__role">數學科</span>
+            <h3>○○○ 老師</h3>
+            <p>用積木、遊戲與生活題目，讓數學變得有趣又看得見。</p>
+          </div>
+        </article>
+
+        <article class="teacher-card reveal">
+          <div class="teacher-card__avatar teacher-card__avatar--green"><i class="fa-solid fa-leaf"></i></div>
+          <div class="teacher-card__info">
+            <span class="teacher-card__role">自然科</span>
+            <h3>○○○ 老師</h3>
+            <p>帶著孩子走出教室，觀察、紀錄、提問，愛上大自然。</p>
+          </div>
+        </article>
+
+        <article class="teacher-card reveal">
+          <div class="teacher-card__avatar teacher-card__avatar--orange"><i class="fa-solid fa-globe"></i></div>
+          <div class="teacher-card__info">
+            <span class="teacher-card__role">社會科</span>
+            <h3>○○○ 老師</h3>
+            <p>從家鄉到世界，讓孩子成為關心社會的小公民。</p>
+          </div>
+        </article>
+
+        <article class="teacher-card reveal">
+          <div class="teacher-card__avatar teacher-card__avatar--pink"><i class="fa-solid fa-music"></i></div>
+          <div class="teacher-card__info">
+            <span class="teacher-card__role">音樂與藝術</span>
+            <h3>○○○ 老師</h3>
+            <p>帶領班級合奏與手作展演，讓舞台上的孩子閃閃發光。</p>
+          </div>
+        </article>
+
+        <article class="teacher-card reveal">
+          <div class="teacher-card__avatar teacher-card__avatar--teal"><i class="fa-solid fa-heart-pulse"></i></div>
+          <div class="teacher-card__info">
+            <span class="teacher-card__role">健康與體育</span>
+            <h3>○○○ 老師</h3>
+            <p>重視孩子的運動習慣與身心平衡，快樂跑、好好睡。</p>
+          </div>
+        </article>
+
+        <article class="teacher-card reveal">
+          <div class="teacher-card__avatar teacher-card__avatar--sky"><i class="fa-solid fa-language"></i></div>
+          <div class="teacher-card__info">
+            <span class="teacher-card__role">英語科</span>
+            <h3>○○○ 老師</h3>
+            <p>帶著大家用歌謠和遊戲學英文，敢開口就是進步。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 班級規約 ==================== -->
+  <section class="section section--alt" id="rules">
+    <div class="container">
+      <header class="section__head reveal">
+        <p class="section__eyebrow"><i class="fa-solid fa-handshake-angle"></i> CLASS RULES</p>
+        <h2 class="section__title">班級共同約定</h2>
+        <p class="section__lead">我們一起訂下的六個小約定，班上的每位成員都要遵守。</p>
+      </header>
+
+      <div class="rules-grid">
+        <div class="rule-card reveal"><span class="rule-card__no">01</span><i class="fa-solid fa-hand"></i><b>友善有禮</b><p>用問候與謝謝，開啟每一段對話。</p></div>
+        <div class="rule-card reveal"><span class="rule-card__no">02</span><i class="fa-solid fa-bell-concierge"></i><b>準時守序</b><p>上課鈴響就回到座位，排队不奔跑。</p></div>
+        <div class="rule-card reveal"><span class="rule-card__no">03</span><i class="fa-solid fa-pen-ruler"></i><b>整潔愛美</b><p>自己的桌面自己整理，環境人人有責。</p></div>
+        <div class="rule-card reveal"><span class="rule-card__no">04</span><i class="fa-solid fa-volume-high"></i><b>專心聆聽</b><p>眼睛看著說話的人，不搶先發言。</p></div>
+        <div class="rule-card reveal"><span class="rule-card__no">05</span><i class="fa-solid fa-check-double"></i><b>誠實負責</b><p>誠實面對作業，錯了願意修正。</p></div>
+        <div class="rule-card reveal"><span class="rule-card__no">06</span><i class="fa-solid fa-people-group"></i><b>團結合作</b><p>分組時互相幫助，完成屬於全班的任務。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== QR Code 加入班群 ==================== -->
+  <section class="section" id="join">
+    <div class="container">
+      <div class="join-card reveal">
+        <div class="join-card__text">
+          <p class="section__eyebrow section__eyebrow--light"><i class="fa-solid fa-qrcode"></i> JOIN US</p>
+          <h2 class="join-card__title">掃描 QR Code<br>加入三年甲班 LINE 群組</h2>
+          <p class="join-card__desc">
+            群組內即時公布作業、繳交提醒、活動照片與臨時通知。
+            加入時請附上「孩子姓名 + 家長姓名」，方便老師認證。
+          </p>
+          <ul class="join-card__list">
+            <li><i class="fa-solid fa-circle-check"></i> 隨時收到班級通知</li>
+            <li><i class="fa-solid fa-circle-check"></i> 線上查看課表與公告</li>
+            <li><i class="fa-solid fa-circle-check"></i> 與老師直接溝通</li>
+          </ul>
+          <p class="join-card__note">
+            <i class="fa-solid fa-circle-info"></i>
+            若無法掃描，請長按下方圖片選擇「掃描 QR 碼」，或於班級註冊表填寫聯絡方式。
+          </p>
+        </div>
+
+        <div class="join-card__qr">
+          <div class="qr-frame">
+            <span class="qr-frame__corner qr-frame__corner--tl"></span>
+            <span class="qr-frame__corner qr-frame__corner--tr"></span>
+            <span class="qr-frame__corner qr-frame__corner--bl"></span>
+            <span class="qr-frame__corner qr-frame__corner--br"></span>
+            <img src="qrcode.png" alt="三年甲班 LINE 群組 QR Code" class="qr-image" width="450" height="450">
+          </div>
+          <p class="qr-caption">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            請使用手機 LINE「掃描 QR 碼」加入
+          </p>
+          <button class="btn btn--light btn--sm" id="qrZoomBtn" type="button">
+            <i class="fa-solid fa-magnifying-glass-plus"></i> 點擊放大
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 聯絡資訊 ==================== -->
+  <section class="section section--tight" id="contact">
+    <div class="container">
+      <header class="section__head reveal">
+        <p class="section__eyebrow"><i class="fa-solid fa-headset"></i> CONTACT</p>
+        <h2 class="section__title">聯絡資訊</h2>
+      </header>
+
+      <div class="contact-grid">
+        <div class="contact-card reveal">
+          <span class="contact-card__icon"><i class="fa-solid fa-location-dot"></i></span>
+          <div>
+            <b>學校地址</b>
+            <p>○○市○○區育華路 100 號<br>三年甲班教室（三樓）</p>
+          </div>
+        </div>
+        <div class="contact-card reveal">
+          <span class="contact-card__icon"><i class="fa-solid fa-phone"></i></span>
+          <div>
+            <b>電話／傳真</b>
+            <p>(02) 0000-0000<br>傳真：(02) 0000-0001</p>
+          </div>
+        </div>
+        <div class="contact-card reveal">
+          <span class="contact-card__icon"><i class="fa-solid fa-envelope"></i></span>
+          <div>
+            <b>電子信箱</b>
+            <p>class3a@yuhua.edu.tw<br>家長回覆請於 3 個工作天內</p>
+          </div>
+        </div>
+        <div class="contact-card reveal">
+          <span class="contact-card__icon"><i class="fa-solid fa-clock"></i></span>
+          <div>
+            <b>導師辦公時間</b>
+            <p>週一至週五 07:30 - 16:00<br>午休時間亦可預約</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ==================== 頁尾 ==================== -->
+<footer class="site-footer">
+  <div class="container footer__top">
+    <div class="footer__brand">
+      <img src="logo.png" alt="育華國小三年甲班班徽" width="72" height="72">
+      <div>
+        <strong>育華國小 三年甲班</strong>
+        <p>快樂學習・認真成長・溫暖陪伴</p>
+      </div>
+    </div>
+
+    <nav class="footer__links" aria-label="頁尾選單">
+      <a href="#about">班級簡介</a>
+      <a href="#announce">最新公告</a>
+      <a href="#timetable">課表查詢</a>
+      <a href="#activities">活動剪影</a>
+      <a href="#teacher">老師介紹</a>
+      <a href="#join">加入班群</a>
+    </nav>
+
+    <div class="footer__social">
+      <a href="#join" aria-label="LINE 班群"><i class="fa-brands fa-line"></i></a>
+      <a href="#contact" aria-label="電子信箱"><i class="fa-solid fa-envelope"></i></a>
+      <a href="#contact" aria-label="電話"><i class="fa-solid fa-phone"></i></a>
+      <a href="#home" aria-label="回到頂部"><i class="fa-solid fa-house"></i></a>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container">
+      <p>© 2026 育華國小 三年甲班 ｜ 本網站內容若有異動，以導師公告為準</p>
+      <p class="footer__credit">Designed with <i class="fa-solid fa-heart" aria-hidden="true"></i> for 三年甲班</p>
+    </div>
+  </div>
+</footer>
+
+<!-- 返回頂端 -->
+<button class="to-top" id="toTop" aria-label="返回頂端"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- QR Code 放大視窗 -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="QR Code 放大檢視" hidden>
+  <div class="lightbox__inner">
+    <img src="qrcode.png" alt="三年甲班 LINE 群組 QR Code（放大）" width="450" height="450">
+    <button class="lightbox__close" id="lightboxClose" aria-label="關閉"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
